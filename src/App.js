@@ -1,5 +1,6 @@
 import React from "react";
 import TopNav from "./components/TopNav";
+import MessagePreview from "./components/MessagePreview";
 import SideNav from "./components/SideNav";
 import Comments from "./components/Comments";
 import Tasks from "./components/Tasks";
@@ -8,9 +9,10 @@ import Tickets from "./components/Tickets";
 import AreaChart from "./components/AreaChart";
 import DonutChart from "./components/DonutChart";
 import TransactionsPanel from "./components/TransactionsPanel";
+import TransactionRow from "./components/TransactionRow";
 import TasksPanel from "./components/TasksPanel";
 import TaskItem from "./components/TaskItem";
-import PropTypes from "prop-types";;
+import PropTypes from "prop-types";
 
 function App(props) {
 
