@@ -1,4 +1,5 @@
 import React from "react";
+import {connect} from "react-redux";
 
 function Tasks(props) {
   return (
@@ -27,4 +28,10 @@ function Tasks(props) {
 
 }
 
-export default Tasks;
+const mapStateToProps = function (state) {
+  return {
+    tasks: state.newTasks
+  };
+};
+const newTasks = connect(mapStateToProps)(Tasks);
+export default newTasks;

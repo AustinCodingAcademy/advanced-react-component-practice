@@ -1,5 +1,6 @@
 import React from "react";
-import TaskItem from "../components/TaskItem";
+import TaskItem from "./components/TaskItem";
+import {connect} from "react-redux";
 
 function TasksPanel() {
   return (
@@ -22,4 +23,10 @@ function TasksPanel() {
 
 }
 
-export default TasksPanel;
+const mapStateToProps = function (state) {
+  return {
+    tasks: state.tasks
+  };
+};
+const TasksPanelContainer = connect(mapStateToProps)(TasksPanel);
+export default TasksContainerContainer;
