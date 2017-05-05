@@ -1,6 +1,6 @@
 import React from "react";
 
-function Comments() {
+function Comments(props) {
   return (
     <div className="col-lg-3 col-md-6">
         <div className="panel panel-primary">
@@ -11,7 +11,7 @@ function Comments() {
                     </div>
                     <div className="col-xs-9 text-right">
                         <div className="huge">26</div>
-                        <div>New Comments!</div>
+                        <div>{props.newComments}</div>
                     </div>
                 </div>
             </div>

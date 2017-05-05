@@ -13,15 +13,32 @@ import TransactionRow from "./components/TransactionRow";
 import TasksPanel from "./components/TasksPanel";
 import TaskItem from "./components/TaskItem";
 import PropTypes from "prop-types";
+// import Info from ".components/Info";
+
+
+
 
 function App(props) {
+
+
+  const Info = props;
+  const {
+  newComments,
+  newTasks,
+  newOrders,
+  tickets,
+  orders,
+  messages,
+  tasks,
+
+  } = Info;
 
   return (
     <div>
       <div id="wrapper">
         <nav className="navbar navbar-inverse navbar-fixed-top" role="navigation">
           {/*   <TopNav>   */}
-          <TopNav />
+          <TopNav messages={messages}/>
           {/*   </TopNav>   */}
 
 
@@ -50,20 +67,20 @@ function App(props) {
                 <div className="row">
 
                    {/*   </Comments>   */}
-                    <Comments />
+                    <Comments newComments={newComments} />
                     {/*   </Comments>   */}
 
                     {/*   <Tasks>   */}
-                    <Tasks />
+                    <Tasks newTask={newTasks} />
                     {/*   </Tasks>   */}
 
                     {/*   <Orders>   */}
-                    <Orders />
+                    <Orders newOrders={newOrders}/>
                     {/*   </Orders>   */}
 
 
                     {/*   <Tickets>   */}
-                    <Tickets />
+                    <Tickets tickets={tickets}/>
                     {/*   </Tickets>   */}
 
 
@@ -94,7 +111,7 @@ function App(props) {
 
 
                         {/*   </TransactionsPanel>   */}
-                        <TransactionsPanel />
+                        <TransactionsPanel orders={orders}/>
                         {/*   </TransactionsPanel>   */}
 
                     </div>
@@ -113,8 +130,17 @@ function App(props) {
   );
 }
 
-App.propTypes = {
 
-};
+//
+// App.propTypes = {
+//
+//   newComments: Comments,
+//   newTasks: newTasks,
+//   newOrders: newOrders,
+//   tickets: tickets,
+//   orders: orders,
+//   tasks: tasks,
+//   messages: messages
+// };
 
 export default App;

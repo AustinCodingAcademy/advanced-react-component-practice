@@ -16,15 +16,18 @@ tasks,
 messages,
 } = state;
 
+
+console.log(state);
+console.log(newComments);
 ReactDOM.render(
-  <App 
+  <App
     taskItem={taskItem}
     dateTime={dateTime}
     newComments={newComments}
     newTasks={newTasks}
     newOrders={newOrders}
     tickets={tickets}
-    orders={orders} 
+    orders={orders}
     tasks={tasks}
     messages={messages}
     />,

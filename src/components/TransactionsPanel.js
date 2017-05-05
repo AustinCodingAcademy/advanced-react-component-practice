@@ -1,7 +1,8 @@
 import React from "react";
 import TransactionRow from "../components/TransactionRow";
 
-function TransactionsPanel() {
+function TransactionsPanel(props) {
+  const {orders} = props;
   return (
     <div className="panel panel-default">
         <div className="panel-heading">
@@ -20,7 +21,7 @@ function TransactionsPanel() {
                     </thead>
                     <tbody>
                         {/*   <TransactionRow>   */}
-                          <TransactionRow />
+                          <TransactionRow orders={props.orders} />
                         {/*   </TransactionRow>   */}
                     </tbody>
                 </table>

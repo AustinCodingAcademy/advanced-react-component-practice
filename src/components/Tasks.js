@@ -1,6 +1,6 @@
 import React from "react";
 
-function Tasks() {
+function Tasks(props) {
   return (
     <div className="col-lg-3 col-md-6">
         <div className="panel panel-green">
@@ -11,7 +11,7 @@ function Tasks() {
                     </div>
                     <div className="col-xs-9 text-right">
                         <div className="huge">12</div>
-                        <div>New Tasks!</div>
+                        <div>{props.newTasks}</div>
                     </div>
                 </div>
             </div>
