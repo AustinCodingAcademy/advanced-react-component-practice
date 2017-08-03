@@ -1,7 +1,8 @@
 import React from "react";
 import MessagePreview from "./MessagePreview";
+import PropTypes from "prop-types";
 
-function TopNav() {
+function TopNav(props) {
   return (
     <ul className="nav navbar-right top-nav">
       <li className="dropdown">
@@ -9,7 +10,7 @@ function TopNav() {
           <ul className="dropdown-menu message-dropdown">
 
               {/*  <MessagePreview>   */}
-              <MessagePreview />
+              <MessagePreview message={props.messages}/>
               {/*  </MessagePreview>   */}
 
 
@@ -65,5 +66,9 @@ function TopNav() {
       </li>
     </ul>);
 }
+
+TopNav.propTypes = {
+  messages: PropTypes.array.isRequired,
+};
 
 export default TopNav;

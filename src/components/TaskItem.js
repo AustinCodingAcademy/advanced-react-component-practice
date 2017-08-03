@@ -1,6 +1,7 @@
 import React from "react";
+import PropTypes from "prop-types";
 
-function TaskItem() {
+function TaskItem(props) {
 
   return (
     <a href="#" className="list-group-item">
@@ -9,5 +10,9 @@ function TaskItem() {
     </a>
   );
 }
+
+TaskItem.propTypes = {
+  task: PropTypes.object.isRequired,
+};
 
 export default TaskItem;
