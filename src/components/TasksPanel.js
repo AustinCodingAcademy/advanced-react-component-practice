@@ -4,6 +4,10 @@ import PropTypes from "prop-types";
 
 function TasksPanel(props) {
 
+  const taskDiv = props.tasks.map(task => {
+    return <TaskItem key={task.id} task={task}/>
+  });
+
   return (
     <div className="panel panel-default">
         <div className="panel-heading">
@@ -12,7 +16,7 @@ function TasksPanel(props) {
         <div className="panel-body">
             <div className="list-group">
                 {/*   <TaskItem>    */}
-                <TaskItem task={props.tasks}/>
+                {taskDiv}
                 {/*   </TaskItem>    */}
 
             </div>

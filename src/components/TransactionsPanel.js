@@ -4,6 +4,10 @@ import PropTypes from "prop-types";
 
 function TransactionsPanel(props) {
 
+  const orderDivs = props.orders.map(order => {
+    return <TransactionRow key={order.id} order={order}/>
+  });
+
   return (
     <div className="panel panel-default">
         <div className="panel-heading">
@@ -22,7 +26,7 @@ function TransactionsPanel(props) {
                     </thead>
                     <tbody>
                         {/*   <TransactionRow>   */}
-                        <TransactionRow order={props.orders}/>
+                        {orderDivs}
                         {/*   </TransactionRow>   */}
                     </tbody>
                 </table>
@@ -36,7 +40,7 @@ function TransactionsPanel(props) {
 }
 
 TransactionsPanel.propTypes = {
-  order: PropTypes.array.isRequired,
+  orders: PropTypes.array.isRequired,
 };
 
 export default TransactionsPanel;

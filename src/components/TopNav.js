@@ -3,6 +3,8 @@ import MessagePreview from "./MessagePreview";
 import PropTypes from "prop-types";
 
 function TopNav(props) {
+
+  const messageDivs = props.messages.map(message => <MessagePreview key={message.id} message={message}/>);
   return (
     <ul className="nav navbar-right top-nav">
       <li className="dropdown">
@@ -10,7 +12,7 @@ function TopNav(props) {
           <ul className="dropdown-menu message-dropdown">
 
               {/*  <MessagePreview>   */}
-              <MessagePreview message={props.messages}/>
+              {messageDivs}
               {/*  </MessagePreview>   */}
 
 
