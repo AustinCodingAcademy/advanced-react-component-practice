@@ -1,6 +1,6 @@
 import React from "react";
 import DateTime from "./DateTime";
-
+import propTypes from "prop-types";
 
 function MessagePreview() {
   return (
@@ -22,5 +22,9 @@ function MessagePreview() {
     </li>
   );
 }
+
+MessagePreview.propTypes = {
+  message: propTypes.array.isRequired
+};
 
 export default MessagePreview;

@@ -1,4 +1,5 @@
 import React from "react";
+import propTypes from "prop-types";
 
 function TaskItem() {
   return (
@@ -9,5 +10,9 @@ function TaskItem() {
     </a>
   );
 }
+
+TaskItem.propTypes = {
+  task: propTypes.object.isRequired
+};
 
 export default TaskItem;

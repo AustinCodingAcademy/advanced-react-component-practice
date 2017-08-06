@@ -4,6 +4,7 @@ import App from "./App";
 import "./index.css";
 import state from "./state";
 
+
 const {
 dateTime,
 newComments,
@@ -17,14 +18,14 @@ messages,
 } = state;
 
 ReactDOM.render(
-  <App 
+  <App
     taskItem={taskItem}
     dateTime={dateTime}
     newComments={newComments}
     newTasks={newTasks}
     newOrders={newOrders}
     tickets={tickets}
-    orders={orders} 
+    orders={orders}
     tasks={tasks}
     messages={messages}
     />,

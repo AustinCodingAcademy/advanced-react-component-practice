@@ -9,14 +9,14 @@ import AreaChart from "./components/AreaChart";
 import DonutChart from "./components/DonutChart";
 import TasksPanel from "./components/TasksPanel";
 import TransactionsPanel from "./components/TransactionsPanel";
-import PropTypes from "prop-types";
+import propTypes from "prop-types";
 
 function App(props) {
   return (
     <div>
       <div id="wrapper">
         <nav className="navbar navbar-inverse navbar-fixed-top" role="navigation">
-          <TopNav />
+          <TopNav messages={props.messages} />
           <SideNav />
         </nav>
         <div id="page-wrapper">
@@ -34,16 +34,16 @@ function App(props) {
               </div>
             </div>
             <div className="row">
-              <Comments />
-              <Tasks />
-              <Orders />
-              <Tickets />
+              <Comments newComments={props.newComments} />
+              <Tasks newTasks={props.newTasks} />
+              <Orders newOrders={props.newOrders} />
+              <Tickets tickets={props.tickets} />
             </div>
             <AreaChart />
             <div className="row">
               <DonutChart />
-              <TasksPanel />
-              <TransactionsPanel />
+              <TasksPanel tasks={props.tasks} />
+              <TransactionsPanel orders={props.orders} />
             </div>
           </div>
         </div>
@@ -53,7 +53,15 @@ function App(props) {
 }
 
 App.propTypes = {
-
+  taskItem: propTypes.string,
+  dateTime: propTypes.string,
+  newComments: propTypes.string,
+  newTasks: propTypes.number,
+  newOrders: propTypes.number,
+  tickets: propTypes.number,
+  orders: propTypes.array,
+  tasks: propTypes.string,
+  messages: propTypes.array
 };
 
 export default App;
