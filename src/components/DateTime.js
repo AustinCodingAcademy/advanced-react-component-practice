@@ -1,12 +1,17 @@
 import React from "react";
+import propTypes from "prop-types";
 
-function DateTime() {
+function DateTime(props) {
   return (
     <p className="small text-muted">
       <i className="fa fa-clock-o" />
-      Yesterday at 4:32 PM
+      {props.date}
     </p>
   );
 }
+
+DateTime.propTypes = {
+  date: propTypes.string.isRequired
+};
 
 export default DateTime;

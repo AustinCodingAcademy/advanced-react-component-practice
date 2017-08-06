@@ -2,7 +2,13 @@ import React from "react";
 import MessagePreview from "./MessagePreview";
 import propTypes from "prop-types";
 
-function TopNav() {
+function TopNav(props) {
+  const mapMessages = props.messages.map((message, i) => {
+    return (
+      <MessagePreview key={i} message={message} />
+    );
+  });
+
   return (
     <ul className="nav navbar-right top-nav">
       <li className="dropdown">
@@ -10,7 +16,7 @@ function TopNav() {
           <i className="fa fa-envelope" /> <b className="caret" />
         </a>
         <ul className="dropdown-menu message-dropdown">
-          <MessagePreview />
+          {mapMessages}
           <li className="message-footer">
             <a href="#">Read All New Messages</a>
           </li>

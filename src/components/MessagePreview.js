@@ -2,7 +2,7 @@ import React from "react";
 import DateTime from "./DateTime";
 import propTypes from "prop-types";
 
-function MessagePreview() {
+function MessagePreview(props) {
   return (
     <li className="message-preview">
       <a href="#">
@@ -12,10 +12,10 @@ function MessagePreview() {
           </span>
           <div className="media-body">
             <h5 className="media-heading">
-              <strong>John Smith</strong>
+              <strong>{props.message.name}</strong>
             </h5>
-            <DateTime />
-            <p>Lorem ipsum dolor sit amet, consectetur...</p>
+            <DateTime date={props.message.date} />
+            <p>{props.message.message}</p>
           </div>
         </div>
       </a>

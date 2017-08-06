@@ -55,12 +55,12 @@ function App(props) {
 App.propTypes = {
   taskItem: propTypes.string,
   dateTime: propTypes.string,
-  newComments: propTypes.string,
+  newComments: propTypes.number,
   newTasks: propTypes.number,
   newOrders: propTypes.number,
   tickets: propTypes.number,
   orders: propTypes.array,
-  tasks: propTypes.string,
+  tasks: propTypes.array,
   messages: propTypes.array
 };
 

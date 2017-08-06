@@ -2,7 +2,13 @@ import React from "react";
 import TaskItem from "./TaskItem";
 import propTypes from "prop-types";
 
-function TasksPanel() {
+function TasksPanel(props) {
+  const mapTasks = props.tasks.map((task, i) => {
+    return (
+      <TaskItem key={i} task={task} />
+    );
+  });
+
   return (
     <div className="col-lg-4">
       <div className="panel panel-default">
@@ -14,7 +20,7 @@ function TasksPanel() {
         </div>
         <div className="panel-body">
           <div className="list-group">
-            <TaskItem />
+            {mapTasks}
           </div>
           <div className="text-right">
             <a href="#">
@@ -29,7 +35,7 @@ function TasksPanel() {
 }
 
 TasksPanel.propTypes = {
-  tasks: propTypes.string.isRequired
+  tasks: propTypes.array.isRequired
 };
 
 export default TasksPanel;
