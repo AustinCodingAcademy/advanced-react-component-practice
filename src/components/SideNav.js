@@ -40,7 +40,8 @@ function SideNav() {
                 <a href="index-rtl.html"><i className="fa fa-fw fa-dashboard"></i> RTL Dashboard</a>
             </li>
         </ul>
-    </div>);
+    </div>
+  );
 }
 
 export default SideNav;

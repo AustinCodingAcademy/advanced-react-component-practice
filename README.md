@@ -3,23 +3,23 @@
 * DONE --- Use your checklist of how to make react components, use state and use events.
 
 ### Create components
-* In App.js, do a find for comments that look like `{/*   <TopNav>   */}  {/*   </TopNav>   */}`
+* DONE --- In App.js, do a find for comments that look like `{/*   <TopNav>   */}  {/*   </TopNav>   */}`
 * Search for the name of the component you are attempting to make
 * This will indicate where the component should start and end
 * Cut out the code between the comments and put in its own file
 * Create .js files for each component. Make sure to name it the same as the component.
 
 ### Components
-* TopNav (already made)
-* SideNav
-* Comments
-* Tasks
-* Orders
-* Tickets
-* AreaChart
-* DonutChart
-* TasksPanel
-* TransactionsPanel
+* DONE --- TopNav (already made)
+* DONE --- SideNav
+* DONE --- Comments
+* DONE --- Tasks
+* DONE --- Orders
+* DONE --- Tickets
+* DONE --- AreaChart
+* DONE --- DonutChart
+* DONE --- TasksPanel
+* DONE --- TransactionsPanel
 * MessagePreview (which is in TopNav)
 * DateTime (which is in MessagePreview)
 * TaskItem (which is in TaskPanel)
