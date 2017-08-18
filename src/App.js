@@ -1,18 +1,18 @@
 import React from "react";
 import TopNav from "./components/TopNav";
+import SideNav from "./components/SideNav";
 import PropTypes from "prop-types";
 
 function App(props) {
- 
+
   return (
-    <div> 
+    <div>
       <div id="wrapper">
         <nav className="navbar navbar-inverse navbar-fixed-top" role="navigation">
           {/*   <TopNav>   */}
           <TopNav />
           {/*   </TopNav>   */}
-
-
+          <SideNav />
             {/*   <SideNav>   */}
             <div className="collapse navbar-collapse navbar-ex1-collapse">
                 <ul className="nav navbar-nav side-nav">
@@ -60,7 +60,7 @@ function App(props) {
 
             <div className="container-fluid">
 
-                
+
                 <div className="row">
                     <div className="col-lg-12">
                         <h1 className="page-header">
@@ -180,7 +180,7 @@ function App(props) {
 
 
                 </div>
-                
+
                 {/*   <AreaChart>   */}
                 <div className="row">
                     <div className="col-lg-12">
@@ -230,7 +230,7 @@ function App(props) {
                                         <i className="fa fa-fw fa-calendar"></i> Calendar updated
                                     </a>
                                     {/*   </TaskItem>    */}
-                                    
+
                                 </div>
                                 <div className="text-right">
                                     <a href="#">View All Activity <i className="fa fa-arrow-circle-right"></i></a>
@@ -281,13 +281,13 @@ function App(props) {
 
                     </div>
                 </div>
-                
+
 
             </div>
-            
+
 
         </div>
-        
+
 
     </div>
     </div>
