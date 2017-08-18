@@ -1,4 +1,5 @@
 import React from "react";
+import TaskItem from "./TaskItem";
 
 function TasksPanel() {
   return (
@@ -9,10 +10,7 @@ function TasksPanel() {
         <div className="panel-body">
             <div className="list-group">
                 {/*   <TaskItem>    */}
-                <a href="#" className="list-group-item">
-                    <span className="badge">just now</span>
-                    <i className="fa fa-fw fa-calendar"></i> Calendar updated
-                </a>
+                <TaskItem />
                 {/*   </TaskItem>    */}
 
             </div>

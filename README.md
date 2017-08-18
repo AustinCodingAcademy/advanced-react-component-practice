@@ -20,10 +20,10 @@
 * DONE --- DonutChart
 * DONE --- TasksPanel
 * DONE --- TransactionsPanel
-* MessagePreview (which is in TopNav)
-* DateTime (which is in MessagePreview)
-* TaskItem (which is in TaskPanel)
-* TransactionRow (which is in TransactionsPanel)
+* DONE --- MessagePreview (which is in TopNav)
+* DONE --- DateTime (which is in MessagePreview)
+* DONE --- TaskItem (which is in TaskPanel)
+* DONE --- TransactionRow (which is in TransactionsPanel)
 
 ### Import and use components where appropriate
 * This is SOP from checklist.
