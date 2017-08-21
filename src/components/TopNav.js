@@ -1,5 +1,6 @@
 import React from "react";
-import MessagePreview from "./MessagePreview"
+import MessagePreview from "./MessagePreview";
+import PropTypes from "prop-types";
 
 function TopNav() {
   return (
@@ -65,5 +66,9 @@ function TopNav() {
       </li>
     </ul>);
 }
+
+TopNav.propTypes = {
+ order: PropTypes.object.isRequired
+};
 
 export default TopNav;

@@ -1,5 +1,6 @@
 import React from "react";
 import TransactionRow from "./TransactionRow";
+import PropTypes from "prop-types";
 
 function TransactionsPanel() {
   return (
@@ -32,5 +33,9 @@ function TransactionsPanel() {
     </div>
   );
 }
+
+TransactionsPanel.propTypes = {
+ orders: PropTypes.array.isRequired
+};
 
 export default TransactionsPanel;

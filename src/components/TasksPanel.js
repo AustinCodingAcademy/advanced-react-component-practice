@@ -1,5 +1,6 @@
 import React from "react";
 import TaskItem from "./TaskItem";
+import PropTypes from "prop-types";
 
 function TasksPanel() {
   return (
@@ -21,5 +22,9 @@ function TasksPanel() {
     </div>
   );
 }
+
+TasksPanel.propTypes = {
+ tasks: PropTypes.array.isRequired
+};
 
 export default TasksPanel;

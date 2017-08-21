@@ -33,26 +33,26 @@
 * imagine if you did `import div from “./components/div”`
 * If you want that div to show up on the page, what do you do? Its the same thing with components
 * `<div />` is the same as `<TopNav />`
-* Replace the comments with the actual usage of the components (custom element)
+* DONE --- Replace the comments with the actual usage of the components (custom element)
 
 ### Props
 * After looking in index.js, in App.js add PropTypes for each prop that index is giving to App
 * We do not want to have to look in index.js to see what props App has. We should just be able to look in App
-* Pass the newComments prop from App to Comments
-* Pass the newTasks prop from App to Tasks
-* Pass the newOrders prop from App to Orders
-* Pass the tickets prop from App to Tickets
-* Pass the orders prop from App to TransactionPanel
-* Pass the messages prop from App to TopNav
-* Pass the tasks prop from App to TaskPanel
+* DONE --- Pass the newComments prop from App to Comments
+* DONE --- Pass the newTasks prop from App to Tasks
+* DONE --- Pass the newOrders prop from App to Orders
+* DONE --- Pass the tickets prop from App to Tickets
+* DONE --- Pass the orders prop from App to TransactionPanel
+* DONE --- Pass the messages prop from App to TopNav
+* DONE --- Pass the tasks prop from App to TaskPanel
 
 ### Prop Types
-* TransactionRow should require one prop called "order" that is an object
-* TaskItem should require one prop called "task" that is an object
-* MessagePreview should require one prop called "message" that is an object
-* TopNav should require one prop called "messages" that is an array
-* TransactionPanel should require one prop called "orders" that is an array
-* TasksPanel should require one prop called "tasks" that is an array
+* DONE --- TransactionRow should require one prop called "order" that is an object
+* DONE --- TaskItem should require one prop called "task" that is an object
+* DONE --- MessagePreview should require one prop called "message" that is an object
+* DONE --- TopNav should require one prop called "messages" that is an array
+* DONE --- TransactionPanel should require one prop called "orders" that is an array
+* DONE --- TasksPanel should require one prop called "tasks" that is an array
 
 ### Use Props
 * TaskItem should use the task prop to populate the task name and the date
