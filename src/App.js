@@ -101,16 +101,22 @@ function App(props) {
 
 
         </div>
-
-
-    </div>
+      </div>
     </div>
 
   );
 }
 
 App.propTypes = {
-
+  TaskItem: PropTypes.string,
+  dateTime: PropTypes.string,
+  newComments: PropTypes.number,
+  newTasks: PropTypes.number,
+  newOrders: PropTypes.number,
+  tickets: PropTypes.number,
+  orders: PropTypes.array,
+  tasks: PropTypes.array,
+  messages: PropTypes.array,
 };
 
 export default App;

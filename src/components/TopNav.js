@@ -2,15 +2,22 @@ import React from "react";
 import MessagePreview from "./MessagePreview";
 import PropTypes from "prop-types";
 
-function TopNav() {
+function TopNav(props) {
+
+  const messageDivs = props.messages.map((message,i) => {
   return (
+    <MessagePreview key={i} message={message} />
+    );
+  });
+
+  return(
     <ul className="nav navbar-right top-nav">
       <li className="dropdown">
           <a href="#" className="dropdown-toggle" data-toggle="dropdown"><i className="fa fa-envelope"></i> <b className="caret"></b></a>
           <ul className="dropdown-menu message-dropdown">
 
               {/*  <MessagePreview>   */}
-              <MessagePreview />
+              {messageDivs}
               {/*  </MessagePreview>   */}
 
 

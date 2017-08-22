@@ -1,11 +1,13 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-function TaskItem () {
+function TaskItem (props) {
+  console.log(props);
   return (
     <a href="#" className="list-group-item">
-        <span className="badge">just now</span>
-        <i className="fa fa-fw fa-calendar"></i> Calendar updated
+        <span className="badge">{props.List.task}</span>
+        <i className="fa fa-fw fa-calendar"></i>  
+        {props.List.date}
     </a>
   );
 }
