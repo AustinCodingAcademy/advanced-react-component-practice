@@ -1,6 +1,6 @@
 import React from "react";
 import MessagePreview from "./MessagePreview";
-import PropTypes from "prop-types";
+// import PropTypes from "prop-types";
 
 function TopNav(props) {
 
@@ -74,8 +74,8 @@ function TopNav(props) {
     </ul>);
 }
 
-TopNav.propTypes = {
- order: PropTypes.object.isRequired
-};
+// TopNav.propTypes = {
+//  order: PropTypes.object.isRequired
+// };
 
 export default TopNav;

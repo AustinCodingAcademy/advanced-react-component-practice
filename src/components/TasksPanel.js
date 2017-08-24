@@ -4,11 +4,12 @@ import PropTypes from "prop-types";
 
 function TasksPanel(props) {
   const UberTasks = props.tasks;
+  console.log(props);
 
-  const TaskItemList = UberTasks.map((task, i) => {
+  const TaskItemList = UberTasks.map((task) => {
     console.log(task);
     return (
-      <TaskItem key={i} List={task} />
+      <TaskItem key={task.id} List={task} />
     );
   });
 
@@ -33,7 +34,7 @@ function TasksPanel(props) {
 }
 
 TasksPanel.propTypes = {
- tasks: PropTypes.string.isRequired
+ tasks: PropTypes.array.isRequired
 };
 
 export default TasksPanel;
