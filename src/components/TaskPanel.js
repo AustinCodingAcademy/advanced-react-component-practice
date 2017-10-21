@@ -1,7 +1,8 @@
 import React from "react"
 import TaskItem from "./TaskItem";
+import PropTypes from "prop-types";
 
-function TaskPanel() {
+function TaskPanel(props) {
   return (
     <div className="panel panel-default">
         <div className="panel-heading">
@@ -9,7 +10,7 @@ function TaskPanel() {
         </div>
         <div className="panel-body">
             <div className="list-group">
-              <TaskItem />
+              <TaskItem order={props.order}/>
               </div>
               <div className="text-right">
                   <a href="#">View All Activity <i className="fa fa-arrow-circle-right"></i></a>
@@ -18,5 +19,9 @@ function TaskPanel() {
       </div>
   )
 }
+
+TaskPanel.propTypes = {
+  tasks: PropTypes.array.isRequired
+};
 
 export default TaskPanel;

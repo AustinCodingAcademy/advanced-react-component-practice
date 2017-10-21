@@ -17,7 +17,7 @@ function App(props) {
     <div>
       <div id="wrapper">
         <nav className="navbar navbar-inverse navbar-fixed-top" role="navigation">
-            <TopNav />
+            <TopNav messages={props.messages}/>
             <SideNav />
         </nav>
         <div id="page-wrapper">
@@ -35,19 +35,19 @@ function App(props) {
                     </div>
                 </div>
                 <div className="row">
-                      <Comments />
-                      <Task />
-                      <Orders />
-                      <Tickets />
+                      <Comments newComments={props.newComments}/>
+                      <Task newTasks={props.newTasks}/>
+                      <Orders newOrders={props.newOrders}/>
+                      <Tickets tickets={props.tickets}/>
                 </div>
                   <AreaChart />
                 <div className="row">
                   <DonutChart />
                     <div className="col-lg-4">
-                          <TaskPanel />
+                          <TaskPanel tasks={props.tasks}/>
                     </div>
                     <div className="col-lg-4">
-                        <TransactionsPanel />
+                        <TransactionsPanel order={props.orders}/>
                     </div>
                 </div>
             </div>
@@ -57,7 +57,15 @@ function App(props) {
   );
 }
 App.propTypes = {
-
+  dateTime: PropTypes.string.isRequired,
+  newComments: PropTypes.number.isRequired,
+  newTasks: PropTypes.number.isRequired,
+  newOrders: PropTypes.number.isRequired,
+  tickets: PropTypes.number.isRequired,
+  orders: PropTypes.array.isRequired,
+  taskItem: PropTypes.string.isRequired,
+  tasks: PropTypes.array.isRequired,
+  messages: PropTypes.array.isRequired
 };
 
 export default App;

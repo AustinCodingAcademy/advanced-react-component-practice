@@ -1,7 +1,8 @@
 import React from "react";
 import DateTime from "./DateTime";
+import PropTypes from "prop-types";
 
-function MessagePreview() {
+function MessagePreview(props) {
   return(
     <div id="MessagePreview">
       <li className="message-preview">
@@ -23,5 +24,9 @@ function MessagePreview() {
   )
 
 }
+
+MessagePreview.propTypes = {
+  message: PropTypes.object.isRequired
+};
 
 export default MessagePreview;
