@@ -18,7 +18,7 @@ function App(props) {
       <div id="wrapper">
         <nav className="navbar navbar-inverse navbar-fixed-top" role="navigation">
           {/*   <TopNav>   */}
-          <TopNav />
+          <TopNav messages={props.messages} />
           {/*   </TopNav>   */}
 
 
@@ -47,20 +47,19 @@ function App(props) {
                 <div className="row">
 
                 {/*   </Comments>   */}
-                <Comments />
+                <Comments newComments={props.newComments} />
                 {/*   </Comments>   */}
 
                     {/*   <Tasks>   */}
-                    <Tasks />
+                    <Tasks newTasks={props.newTasks} />
                     {/*   </Tasks>   */}
 
                     {/*   <Orders>   */}
-                    <Orders />
+                    <Orders newOrders={props.newOrders} />
                     {/*   </Orders>   */}
 
-
                     {/*   <Tickets>   */}
-                    <Tickets />
+                    <Tickets tickets={props.tickets} />
                     {/*   </Tickets>   */}
                 </div>
                 
@@ -78,16 +77,15 @@ function App(props) {
 
                     <div className="col-lg-4">
                         {/*   <TasksPanel>   */}
-                        <TasksPanel />
+                        <TasksPanel tasks={props.tasks} />
                         {/*   </TasksPanel>   */}
 
 
                     </div>
                     <div className="col-lg-4">
 
-
                         {/*   </TransactionsPanel>   */}
-                        <TransactionsPanel />
+                        <TransactionsPanel orders={props.orders} />
                         {/*   </TransactionsPanel>   */}
 
                     </div>
@@ -107,7 +105,15 @@ function App(props) {
 }
 
 App.propTypes = {
-
+    taskItem: PropTypes.string,
+    dateTime: PropTypes.string,
+    newComments: PropTypes.array,
+    newTasks: PropTypes.array,
+    newOrders: PropTypes.array,
+    tickets: PropTypes.array,
+    orders: PropTypes.array,
+    tasks: PropTypes.array,
+    messages: PropTypes.array
 };
 
 export default App;

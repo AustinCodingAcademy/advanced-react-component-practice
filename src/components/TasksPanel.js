@@ -1,7 +1,8 @@
 import React from "react";
 import TaskItem from "./TaskItem";
+import PropTypes from "prop-types";
 
-function TasksPanel() {
+function TasksPanel(props) {
     return (
         <div className="panel panel-default">
             <div className="panel-heading">
@@ -10,7 +11,9 @@ function TasksPanel() {
             <div className="panel-body">
                 <div className="list-group">
                     {/*   <TaskItem>    */}
-                    <TaskItem />
+                    {props.tasks.map( function(task){
+                        return <TaskItem key={task.id} task={task} />
+                    })}
                     {/*   </TaskItem>    */}
                     
                 </div>
@@ -20,6 +23,10 @@ function TasksPanel() {
             </div>
         </div>     
     );
+}
+
+TasksPanel.propTypes = {
+    tasks: PropTypes.array
 }
 
 export default TasksPanel;
