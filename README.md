@@ -1,4 +1,4 @@
-### Setup
+  ### Setup
 * Fork, Clone, yarn install, yarn start
 * Use your checklist of how to make react components, use state and use events.
 
@@ -63,5 +63,3 @@
 * TasksPanel - map the array of "tasks" into array of TaskItem's. Pass one task into TaskItem
 * TopNav - map the array of "messages" into array of MessagePreview's. Pass one message into MessagePreview
 * TransactionPanel - map the array of "orders" into array of TransactionRow's. Pass one order into TransactionRow
-
-
