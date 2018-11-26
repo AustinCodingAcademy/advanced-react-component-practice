@@ -3,7 +3,7 @@
 The purpose of this project is to practice coding React components. We will use our knowledge of creating functional components where each component is coded in its own file. We are also going to experience what might really happen on the job. You may be tasked with working an existing website in which all the html is crammed into one file. Your job is to implement React and decide how you can organize the existing html into components. In this project you are told what the components should be but in real life you would have to decide this for yourself.
 
 ### Setup
-* Fork, Clone, yarn install, yarn start
+* Fork, Clone, npm install, npm start
 * Use your checklist of how to make react components, use state and use events.
 
 ### Create components
